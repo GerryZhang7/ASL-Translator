@@ -7,41 +7,57 @@ let sessionId = "1_MX40NjUzMTM2Mn5-MTU4MzYyNzcxMTE3OX5CVFZuWkRwTTJRTGVNQkZoN2s1R
 let token = "T1==cGFydG5lcl9pZD00NjUzMTM2MiZzaWc9YmNlYzIwMDhhZWVmNGU0Y2NmNDk2OWExYjExNjdmOGYxODAzMDVjOTpzZXNzaW9uX2lkPTFfTVg0ME5qVXpNVE0yTW41LU1UVTRNell5TnpjeE1URTNPWDVDVkZadVdrUndUVEpSVEdWTlFrWm9OMnMxUm1Fd1EwOS1mZyZjcmVhdGVfdGltZT0xNTgzNjM1NjQ3Jm5vbmNlPTAuMDUwOTk0ODc4MDYyODA2Njcmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU4NjIyNDA0OCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
 
 // Handling all of our errors here by alerting them
-function handleError(error) {
+function handleErrorSub(error) {
   if (error) {
-    alert(error.message);
+    //alert(error.message);
+  }else{
+      console.log("Subscription successful");
   }
 }
 
+function handleErrorPub(error) {
+    if (error) {
+      //alert(error.message);
+    }else{
+        console.log("Publish successful");
+    }
+  }
+
+
 // (optional) add server code here
+x = document.querySelectorAll("video");
+var subscriber;
 initializeSession();
+
 
 function initializeSession() {
   var session = OT.initSession(apiKey, sessionId);
 
-  // Create a publisher
-  var publisher = OT.initPublisher('publisher', {
+ // Subscribe to a newly created stream
+  session.on('streamCreated', function(event) {
+  subscriber = session.subscribe(event.stream, 'subscriber', {
+      insertMode: 'append',
+      width: '100%',
+      height: '100%'
+    }, handleErrorSub);
+  });
+  //console.log(subscriber.getStyle());
+   // Create a publisher
+   var publisher = OT.initPublisher('publisher', {
     insertMode: 'append',
-    width: 400,
-    height: 300
-  }, handleError);
-
+    width: '100%',
+    height: '100%'
+  }, handleErrorPub);
+ 
+  
   // Connect to the session
   session.connect(token, function(error) {
     // If the connection is successful, initialize a publisher and publish to the session
     if (error) {
       handleError(error);
     } else {
-      //session.publish(publisher, handleError);
+      session.publish(publisher, handleErrorPub);
+      //session.unpublish(publisher);
     }
-  });
-
-  // Subscribe to a newly created stream
-  session.on('streamCreated', function(event) {
-    session.subscribe(event.stream, 'subscriber', {
-      insertMode: 'append',
-      width: 400,
-      height: 300
-    }, handleError);
   });
 }

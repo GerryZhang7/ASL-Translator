@@ -1,7 +1,5 @@
 # ASL-Translator
 NewHacks 2020
-Test
-
 ### CNN Model Requirements
 - Python 3.x
 - Tensorflow 1.5

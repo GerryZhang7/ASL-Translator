@@ -259,3 +259,100 @@
                 <!-- commented out pricing tag -->
                 <!--                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>-->
 <!--                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>-->
+
+
+
+<!--Header-->
+                                    <div class="text-center">
+                                        <h3 class="white-text">
+                                            Access Code :
+                                            </h3>
+                                        <hr class="hr-light">
+                                    </div>
+                                    <!--Body-->
+                                    <div class="md-form">
+                                        <input type="text" id="form3" class="white-text form-control">
+                                        <label for="form3" class="active">Your name</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-envelope prefix white-text active"></i>
+                                        <input type="email" id="form2" class="white-text form-control">
+                                        <label for="form2" class="active">Your email</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-lock prefix white-text active"></i>
+                                        <input type="password" id="form4" class="white-text form-control">
+                                        <label for="form4">Your password</label>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-indigo">Sign up</button>
+                                        <hr class="hr-light mb-3 mt-4">
+                                        <div class="inline-ul text-center">
+                                            <a class="p-2 m-2 tw-ic">
+                                                <i class="fab fa-twitter white-text"></i>
+                                            </a>
+                                            <a class="p-2 m-2 li-ic">
+                                                <i class="fab fa-linkedin-in white-text"> </i>
+                                            </a>
+                                            <a class="p-2 m-2 ins-ic">
+                                                <i class="fas fa-instagram white-text"> </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+    <h4>
+                                           <div class="md-form">
+                                               <label for="form3" class="active">Your name</label>
+                                               <input type="text" id="form3" class="white-text form-control">
+
+                                           </div>
+                                           Enter Chat Room Code :
+                                       </h4>
+                                       
+                                       
+                                       
+                                       
+                                       
+    
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+
+
+<div class="w3-quarter">
+            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+            <p class="w3-large">Responsive</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Passion</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Design</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Support</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        
+        
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>

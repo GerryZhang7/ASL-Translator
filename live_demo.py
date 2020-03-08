@@ -87,7 +87,8 @@ while True:
 
     # Only display predictions with probabilities greater than 0.5
     #if np.max(my_predict) >= 0.50:
-    if timer >= 15:
+    #if timer >= 15:
+    if np.max(my_predict) >= 0.99 and timer >= 15:
         timer = 0; 
         prediction_result = "hello world" 
         #prediction_result = label_dict[top_prd]
@@ -103,19 +104,19 @@ while True:
             cv2.putText(frame, text=prediction_result[i],
                     org=(width // 2 + 230, height // 2 + 75),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                    fontScale=4, color=(255, 255, 0),
+                    fontScale=17, color=(255, 255, 0),
                     thickness=15, lineType=cv2.LINE_AA)
         else:
             cv2.putText(frame, text="[space]",
                     org=(width // 2 + 230, height // 2 + 75),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                    fontScale=4, color=(255, 255, 0),
+                    fontScale=5, color=(255, 255, 0),
                     thickness=15, lineType=cv2.LINE_AA)
         
         i = (i+1) % len(prediction_result)
         #time.sleep(1)        
-        '''# Annotate image with second most probable prediction (displayed on bottom left)
-        cv2.putText(frame, text=pred_2,
+        # Annotate image with second most probable prediction (displayed on bottom left)
+        '''cv2.putText(frame, text=pred_2,
                     org=(width // 2 + width // 5 + 40, (360 + 240)),
                     fontFace=cv2.FONT_HERSHEY_PLAIN,
                     fontScale=6, color=(0, 0, 255),

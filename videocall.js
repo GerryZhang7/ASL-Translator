@@ -1,10 +1,10 @@
 
 let api_key = "46531362";
 // There is a unique session_id where users can join to be in the same room for the conversation
-let session_id = "2_MX40NjUzMTM2Mn5-MTU4MzYxOTM0NzY2NX5aeFRPNjBpSmxnVXdRK3hPdkd3clVTb0t-fg";
+let session_id = "1_MX40NjUzMTM2Mn5-MTU4MzYyNzcxMTE3OX5CVFZuWkRwTTJRTGVNQkZoN2s1RmEwQ09-fg";
 // Each user has a unique token to access the webpage
 // Token checks whether the user can publish to the session
-let token = "T1==cGFydG5lcl9pZD00NjUzMTM2MiZzaWc9ZDhmOGU4MDBmY2ZkZGY5MzhjNzllYjUzODQ1ZmQ5YzU4YTkyZGEzNjpzZXNzaW9uX2lkPTJfTVg0ME5qVXpNVE0yTW41LU1UVTRNell4T1RNME56WTJOWDVhZUZSUE5qQnBTbXhuVlhkUkszaFBka2QzY2xWVGIwdC1mZyZjcmVhdGVfdGltZT0xNTgzNjE5NDM5Jm5vbmNlPTAuMTc4MTExMzQ2Mjc4MDYzMjQmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU4MzYyMzA0MCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
+let token = "T1==cGFydG5lcl9pZD00NjUzMTM2MiZzaWc9OWFmMTg2ODQ0YmZhODdmMWFlODFmYzUxYzkwNmNiMjViMGE4ZDE4YTpzZXNzaW9uX2lkPTFfTVg0ME5qVXpNVE0yTW41LU1UVTRNell5TnpjeE1URTNPWDVDVkZadVdrUndUVEpSVEdWTlFrWm9OMnMxUm1Fd1EwOS1mZyZjcmVhdGVfdGltZT0xNTgzNjI3NzM4Jm5vbmNlPTAuNDUyNDIxMzk1Nzk0NDY3MTYmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU4NDIyODkzOSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
 
 
 // create publisher

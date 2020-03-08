@@ -48,14 +48,22 @@ label_dict = {pos: letter
 
 video_capture = cv2.VideoCapture(0)
 
+#if not video_capture.isOpened():
+#    raise Exception("Could not open video device")
+# Set properties. Each returns === True on success (i.e. correct resolution)
+video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 5000)
+video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 5000)
+
 fps = 0
+i = 0
+timer = 0
 start = time.time()
 
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
     fps += 1
-
+    timer += 1
     # Draw rectangle around face
     x = 313
     y = 82
@@ -65,6 +73,7 @@ while True:
 
     # Crop + process captured frame
     hand = frame[83:650, 314:764]
+    #hand = frame[0:1000, 0:1000]
     hand = square_pad(hand)
     hand = preprocess_for_vgg(hand)
 
@@ -77,23 +86,35 @@ while True:
     top_prd = np.argmax(my_predict)
 
     # Only display predictions with probabilities greater than 0.5
-    if np.max(my_predict) >= 0.50:
-
-        prediction_result = label_dict[top_prd]
+    #if np.max(my_predict) >= 0.50:
+    if timer >= 15:
+        timer = 0; 
+        prediction_result = "hello world" 
+        #prediction_result = label_dict[top_prd]
         preds_list = np.argsort(my_predict)[0]
-        pred_2 = label_dict[preds_list[-2]]
-        pred_3 = label_dict[preds_list[-3]]
+        #pred_2 = label_dict[preds_list[-2]]
+        #pred_3 = label_dict[preds_list[-3]]
 
         width = int(video_capture.get(3) + 0.5)
         height = int(video_capture.get(4) + 0.5)
 
         # Annotate image with most probable prediction
-        cv2.putText(frame, text=prediction_result,
+        if i != 5:
+            cv2.putText(frame, text=prediction_result[i],
                     org=(width // 2 + 230, height // 2 + 75),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
                     fontScale=4, color=(255, 255, 0),
                     thickness=15, lineType=cv2.LINE_AA)
-        # Annotate image with second most probable prediction (displayed on bottom left)
+        else:
+            cv2.putText(frame, text="[space]",
+                    org=(width // 2 + 230, height // 2 + 75),
+                    fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                    fontScale=4, color=(255, 255, 0),
+                    thickness=15, lineType=cv2.LINE_AA)
+        
+        i = (i+1) % len(prediction_result)
+        #time.sleep(1)        
+        '''# Annotate image with second most probable prediction (displayed on bottom left)
         cv2.putText(frame, text=pred_2,
                     org=(width // 2 + width // 5 + 40, (360 + 240)),
                     fontFace=cv2.FONT_HERSHEY_PLAIN,
@@ -104,14 +125,14 @@ while True:
                     org=(width // 2 + width // 3 + 5, (360 + 240)),
                     fontFace=cv2.FONT_HERSHEY_PLAIN,
                     fontScale=6, color=(0, 0, 255),
-                    thickness=6, lineType=cv2.LINE_AA)
+                    thickness=6, lineType=cv2.LINE_AA)'''
 
     # Display the resulting frame
     cv2.imshow('Video', frame)
-
+    
     # Press 'q' to exit live loop
     if cv2.waitKey(10) & 0xFF == ord('q'):
-        break
+       break
 
 # Calculate frames per second
 end = time.time()

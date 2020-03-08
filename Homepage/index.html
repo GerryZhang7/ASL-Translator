@@ -61,13 +61,15 @@
         <!-- Navbar (sit on top) -->
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+                <a href="#home" class="w3-bar-item w3-button w3-wide">
+                    <img src="logo.2.png" style="max-width: 100px; max-height: 33px">
+                </a>
                 <!-- Right-sided navbar links -->
                 <div class="w3-right w3-hide-small">
-                    <a href="#inspiration" class="w3-bar-item w3-button">INSPIRATION</a>
-                    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-                    <a href="#how" class="w3-bar-item w3-button">HOW TO USE</a>
-                    <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> OUR TEAM</a>
+                    <a href="#about" class="w3-bar-item w3-button " style="height: 65px">ABOUT</a>
+                    <a href="#inspiration" class="w3-bar-item w3-button" style="height: 65px">INSPIRATION</a>
+                    <a href="#how" class="w3-bar-item w3-button" style="height: 65px">HOW TO USE</a>
+                    <a href="#team" class="w3-bar-item w3-button" style="height: 65px"><i class="fa fa-user"></i> OUR TEAM</a>
                 </div>
                 <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -152,7 +154,7 @@
                                                 <input type="text" class="form-control" id="RoomCode" placeholder="Room Code">
 
                                             </div>
-                                            <button type="button" class="btn btn-primary btn-sm" id="custom-start-button" onclick=" window.open('http://127.0.0.1:63402/ASL-Translator/client2.html', '_blank')"> Enter Chat </button>
+                                            <button type="button" class="btn btn-primary btn-sm" id="custom-start-button" onclick=" window.open('http://127.0.0.1:63402/ASL-Translator/client2.html')"> Enter Chat </button>
                                         </form>
                                     </div>
                                 </div>
@@ -173,6 +175,18 @@
 
 
 <!-- Main navigation -->
+
+<!-- About Section -->
+<div class="row" style="padding-bottom: 15px" id="about" >
+</div>
+<div class="container" style="margin-top: 55px"  >
+    <h3 class="w3-center" >ABOUT OUR PRODUCT</h3>
+    <div class="w3-row-padding w3-center" style="margin-top:10px">
+        <p class="text-justify col-md-12 text-center"> Speechless is a video calling platform that translates sign language in real time in the form of subtitles during a call. Currently, it supports the reading of the 26 letters of the English alphabet as well as a "space" character for separating words.
+        </p>
+    </div>
+</div>
+
 <!--Main Layout-->
 <main>
    <div class="row" style="padding-bottom: 20px" id="inspiration" >
@@ -192,18 +206,6 @@ Today, around one million people use American Sign Language as their main way to
     </div>
 </main>
 <!--Main Layout-->
-
-<!-- About Section -->
-<div class="row" style="padding-bottom: 15px" id="about" >
-</div>
-<div class="container" style="margin-top: 55px"  >
-    <h3 class="w3-center" >ABOUT OUR PRODUCT</h3>
-    <div class="w3-row-padding w3-center" style="margin-top:64px">
-        
-        <p class="text-justify col-md-12 text-center"> Speechless is a video calling platform that translates sign language in real time in the form of subtitles during a call. Currently, it supports the reading of the 26 letters of the English alphabet as well as a "space" character for separating words.
-        </p>
-    </div>
-</div>
 
 <!-- How it Works -->
 <div class="row" style="padding-bottom: 15px" id="how" >

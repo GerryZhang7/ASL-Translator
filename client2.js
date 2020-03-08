@@ -8,9 +8,18 @@ let token = "T1==cGFydG5lcl9pZD00NjUzMTM2MiZzaWc9MTE5YmRhOTUxMzIzNTk1YWVmMzVlZGR
 
 
 // Handling all of our errors here by alerting them
-function handleError(error) {
+function handleErrorSub(error) {
   if (error) {
     alert(error.message);
+  }else{
+      console.log('Sub successgful')
+  }
+}
+function handleErrorPub(error) {
+  if (error) {
+    alert(error.message);
+  }else{
+      console.log('Pub successgful')
   }
 }
 
@@ -20,15 +29,23 @@ initializeSession();
 function initializeSession() {
   var session = OT.initSession(apiKey, sessionId);
 
-
   // Subscribe to a newly created stream
   session.on('streamCreated', function(event) {
     session.subscribe(event.stream, 'subscriber', {
-      insertMode: 'append',
+      insertMode: '',
       width: '50%',
       height: '50%'
-    }, handleError);
+    }, handleErrorSub);
   });
+
+    
+    
+ var publisher = OT.initPublisher('publisher', {
+    insertMode: 'append',
+    width: '50%',
+    height: '50%'
+  }, handleErrorPub);
+    
 
  
 
@@ -38,7 +55,7 @@ function initializeSession() {
     if (error) {
       handleError(error);
     } else {
-      session.publish(publisher, handleError);
+      session.publish(publisher, handleErrorPub);
     }
   });
 }

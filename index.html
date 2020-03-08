@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
     <!-- Template include -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,93 +49,95 @@
     .w3-bar .w3-button {
         padding: 16px;
     }
+
 </style>
 
 <header>
 
 
-<body>
-   
-   
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-card" id="myNavbar">
-            <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
-            <!-- Right-sided navbar links -->
-            <div class="w3-right w3-hide-small">
-                <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> OUR TEAM</a>
+    <body>
+       
+       
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+                    <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> OUR TEAM</a>
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-                <i class="fa fa-bars"></i>
-            </a>
         </div>
-    </div>
 
-       <!-- Main interface for using the web app-->
-        <div class="view" style="background-image: url(microphone.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" id="home">
+        <!-- Main interface for using the web app-->
+        <div class="view" style="background-image: url(microphone.jpg); background-repeat: no-repeat; background-size: cover; background-position: top center;" id="home">
             <!-- Mask & flexbox options-->
-            <div class="mask rgba-gradient align-items-center" style="padding:65px 16px">
+            <div class="mask rgba-gradient align-items-center" style="padding:100px 16px">
                 <!-- Content -->
                 <div class="container">
-                    <!--Grid row-->
+
+                    <!--Grid row LOGO-->
+                    <div class="row mt-0">
+                        <!--Grid column-->
+                        <div class="col-md-4" >
+                        </div>
+                        
+                        <!--Grid column-->
+                        <div class="col-md-4 mt-md-1 mt-0 white-text text-center text-lg-center" >
+                            <img src="logo.png" alt="logo">
+                        </div>
+                        
+                        <!--Grid column-->
+                        <div class="col-md-4" >
+                        </div>
+
+                    </div>
+                    
+                    <!-- Grid Row words-->
+                    <div class="row mt-3">
+                        <div class="col-md-12 mb-5 mt-md-0 mt-5 white-text text-center text-md-centre">
+                            <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s" id="custom-class"> Connect with your friends without borders. </h1>
+
+                            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+
+                            <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s" id="custom-class"> Have your first Sign-language imbeded video chat with us today! </h6>
+
+                        </div>
+                        <!-- Grid row-->
+                    </div>
+
+                    <!--Grid row chat box-->
                     <div class="row mt-5">
                         <!--Grid column-->
-                        <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
-                           
-                            <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s" id="custom-class"> Have your first Sign-language imbeded video chat with us Today! </h1>
-                            
-                            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
-                            
-                            <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s" id="custom-class"> Have your first Sign-language imbeded video chat with us today! </h6>
-                                
+                        <div class="col-md-3 ">                            
                         </div>
                         <!--Grid column-->
-                        <!--Grid column-->
-                        <div class="col-md-6 col-xl-5 mb-4">
-                            <!--Form-->
+                        
+                        <div class="col-md-6 ">
+                        <!--Form-->
                             <div class="card wow fadeInRight" data-wow-delay="0.3s">
                                 <div class="card-body">
-                                    <!--Header-->
-                                    <div class="text-center">
-                                        <h3 class="white-text">
-                                            <i class="fas fa-user white-text"></i> Register:</h3>
-                                        <hr class="hr-light">
-                                    </div>
-                                    <!--Body-->
-                                    <div class="md-form">
-                                        <i class="fas fa-user prefix white-text active"></i>
-                                        <input type="text" id="form3" class="white-text form-control">
-                                        <label for="form3" class="active">Your name</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <i class="fas fa-envelope prefix white-text active"></i>
-                                        <input type="email" id="form2" class="white-text form-control">
-                                        <label for="form2" class="active">Your email</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <i class="fas fa-lock prefix white-text active"></i>
-                                        <input type="password" id="form4" class="white-text form-control">
-                                        <label for="form4">Your password</label>
-                                    </div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-indigo">Sign up</button>
-                                        <hr class="hr-light mb-3 mt-4">
-                                        <div class="inline-ul text-center">
-                                            <a class="p-2 m-2 tw-ic">
-                                                <i class="fab fa-twitter white-text"></i>
-                                            </a>
-                                            <a class="p-2 m-2 li-ic">
-                                                <i class="fab fa-linkedin-in white-text"> </i>
-                                            </a>
-                                            <a class="p-2 m-2 ins-ic">
-                                                <i class="fas fa-instagram white-text"> </i>
-                                            </a>
-                                        </div>
+                                    <div class="text-center w-100 p-20">
+                                        <form class="form">
+                                            <div class="form-group mb-2">
+                                                <h4> Enter Or Create Chat Room Code : </h4>
+                                            </div>
+
+                                            <div class="form-group mx-sm-3 mb-2">
+                                                <input type="text" class="form-control" id="RoomCode" placeholder="Room Code">
+
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mb-2 btn-lg" id="custom-start-button"> Start Chat </button>
+                                        </form>
                                     </div>
                                 </div>
+                                
                             </div>
                             <!--/.Form-->
                         </div>
@@ -148,169 +150,152 @@
             <!-- Mask & flexbox options-->
         </div>
         <!-- Full Page Intro -->
-    </header>
-        
-    
-    <!-- Main navigation -->
-    <!--Main Layout-->
-    <main>
-        <div class="container">
-            <!--Grid row-->
-            <div class="row py-5">
-                <!--Grid column-->
-                <div class="col-md-12 text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <!--Grid column-->
+        </header>
+
+
+<!-- Main navigation -->
+<!--Main Layout-->
+<main>
+    <div class="container">
+        <!--Grid row-->
+        <div class="row py-5">
+            <!--Grid column-->
+            <div class="col-md-12 text-center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <!--Grid row-->
+            <!--Grid column-->
         </div>
-    </main>
-    <!--Main Layout-->
+        <!--Grid row-->
+    </div>
+</main>
+<!--Main Layout-->
 
+<!-- About Section -->
+<div class="w3-container" style="padding:100px 16px" id="about">
+    <h3 class="w3-center">ABOUT OUR PRODUCT</h3>
+    <p class="w3-center w3-large">features</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <!-- insert image of demo-->
+        <p class="text-justify col-md-12 text-center"> Our product integrates sign language into video calls.</p>
+        <!-- insert image of demo-->
+        <p class="text-justify col-md-12 text-center"> It would be able to recognize the sign language, translate and generate subtitles which would be displayed </p>
+    </div>
+</div>
 
-
-
-
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    </nav>    
-
-   
-    <!-- About Section -->
-    <div class="w3-container" style="padding:100px 16px" id="about">
-        <h3 class="w3-center">ABOUT THE COMPANY</h3>
-        <p class="w3-center w3-large">Key features of our company</p>
-        <div class="w3-row-padding w3-center" style="margin-top:64px">
-            <div class="w3-quarter">
-                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-                <p class="w3-large">Responsive</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+<!-- How it Works -->
+<div class="container" style="padding:100px 16px">
+    <h3 class="w3-center">HOW TO USE</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" style="padding: 10px">
+               <!--insert screenshot-->
+                <p class=" text-center"> First create the access code to the chat room. </p>
             </div>
-            <div class="w3-quarter">
-                <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Passion</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <div class="col-sm" style="padding: 10px">
+                <!--insert screenshot-->
+                <p class="text-center"> Enter the access code and click start to go to the chat room. </p>
             </div>
-            <div class="w3-quarter">
-                <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Design</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-            <div class="w3-quarter">
-                <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Support</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <div class="col-sm" style="padding: 10px">
+                <!--insert screenshot-->
+                <p class="text-center"> Share your code with your friends and start the video chat! </p>
             </div>
         </div>
     </div>
+</div>
 
 
-    <!-- Team Section -->
-    <div class="w3-container" style="padding:100px 16px" id="team">
-        <h3 class="w3-center">THE TEAM</h3>
-        <p class="w3-center w3-large">The ones who runs this company</p>
-        <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-                    <div class="w3-container">
-                        <h3>John Doe</h3>
-                        <p class="w3-opacity">CEO & Founder</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                    </div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:100px 16px" id="team">
+    <h3 class="w3-center">THE TEAM</h3>
+    <p class="w3-center w3-large">The ones who runs this company</p>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+                <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+                <div class="w3-container">
+                    <h3>John Doe</h3>
+                    <p class="w3-opacity">CEO & Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
                 </div>
             </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Anja Doe</h3>
-                        <p class="w3-opacity">Art Director</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                    </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+                <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                <div class="w3-container">
+                    <h3>Anja Doe</h3>
+                    <p class="w3-opacity">Art Director</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
                 </div>
             </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Mike Ross</h3>
-                        <p class="w3-opacity">Web Designer</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                    </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+                <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+                <div class="w3-container">
+                    <h3>Mike Ross</h3>
+                    <p class="w3-opacity">Web Designer</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
                 </div>
             </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Dan Star</h3>
-                        <p class="w3-opacity">Designer</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                    </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+                <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+                <div class="w3-container">
+                    <h3>Dan Star</h3>
+                    <p class="w3-opacity">Designer</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
 
-    <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
+<script>
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
         }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+
+</script>
 
 
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
-
-        function w3_open() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-            } else {
-                mySidebar.style.display = 'block';
-            }
-        }
-
-        // Close the sidebar with the close button
-        function w3_close() {
-            mySidebar.style.display = "none";
-        }
-    </script>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>

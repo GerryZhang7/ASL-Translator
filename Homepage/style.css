@@ -1,0 +1,22 @@
+#custom-class{
+    color:floralwhite; 
+    font-family: roboto;
+    font-size: 80px;
+}
+
+#custom-class-2{
+    color:floralwhite; 
+    font-family: roboto;
+    font-size: 20px;
+}
+
+
+#custom-start-button{
+    background-color: darkred;
+    border-color: brown;
+}
+
+.custum-font{
+    font-size: small;
+}
+

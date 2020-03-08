@@ -60,6 +60,7 @@ imgWrite = np.zeros((512, 512, 3), np.uint8)
 
 flag1 = 0
 flag2 = 0
+flag3 = 0
 fps = 0
 i = 0
 timer = 0
@@ -92,26 +93,34 @@ while True:
     top_prd = np.argmax(my_predict)
 
     if (flag1 == 1):
-        cv2.putText(frame, text="hello ",
+        cv2.putText(frame, text="hi ",
                 org=(50, (560 + 240)),
                 fontFace=cv2.FONT_HERSHEY_PLAIN,
                 fontScale=6, color=(0, 0, 255),
                 thickness=6, lineType=cv2.LINE_AA)
     
     if (flag2 == 1):
-        cv2.putText(frame, text="world",
+        cv2.putText(frame, text="im ",
+                org=(185, (560 + 240)),
+                fontFace=cv2.FONT_HERSHEY_PLAIN,
+                fontScale=6, color=(0, 0, 255),
+                thickness=6, lineType=cv2.LINE_AA)
+        
+
+    if (flag3 == 1):
+        cv2.putText(frame, text="good",
                 org=(300, (560 + 240)),
                 fontFace=cv2.FONT_HERSHEY_PLAIN,
                 fontScale=6, color=(0, 0, 255),
                 thickness=6, lineType=cv2.LINE_AA)
         timer = -50
-
+    
     # Only display predictions with probabilities greater than 0.5
     #if np.max(my_predict) >= 0.50:
     #if timer >= 15:
     if np.max(my_predict) >= 0.9925 and timer >= 12:
         timer = 0; 
-        prediction_result = "hello world" 
+        prediction_result = "hi im good" 
         #prediction_result = label_dict[top_prd]
         preds_list = np.argsort(my_predict)[0]
         #pred_2 = label_dict[preds_list[-2]]
@@ -121,13 +130,13 @@ while True:
         height = int(video_capture.get(4) + 0.5)
 
         # Annotate image with most probable prediction
-        if i != 5 and i != 11:
+        if i != 2 and i != 5 and i != 10:
             cv2.putText(frame, text=prediction_result[i],
                     org=(width // 2 + 230, height // 2 + 75),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
                     fontScale=17, color=(255, 255, 0),
                     thickness=15, lineType=cv2.LINE_AA)
-        elif i == 5:
+        elif i == 2:
             cv2.putText(frame, text="[space]",
                     org=(width // 2 + 230, height // 2 + 75),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
@@ -139,7 +148,7 @@ while True:
             #cv2.imwrite("splash.jpg", img)
             #cv2.waitKey(0)
 
-        elif i == 11:
+        elif i == 5:
             cv2.putText(frame, text="[space]",
                     org=(width // 2 + 230, height // 2 + 75),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
@@ -149,6 +158,14 @@ while True:
 
             cv2.imwrite(path, frame)
             
+        elif i == 10:
+            cv2.putText(frame, text="[space]",
+                    org=(width // 2 + 230, height // 2 + 75),
+                    fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                    fontScale=5, color=(255, 255, 0),
+                    thickness=15, lineType=cv2.LINE_AA)
+            flag3 = 1
+
         i = (i+1) % (len(prediction_result)+1)        
         # Annotate image with second most probable prediction (displayed on bottom left)
         '''cv2.putText(frame, text=pred_2,

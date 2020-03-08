@@ -14,7 +14,6 @@ function handleError(error) {
   }
 }
 
-
 // (optional) add server code here
 initializeSession();
 
@@ -25,15 +24,19 @@ function initializeSession() {
     session.on('streamCreated', function(event) {
       session.subscribe(event.stream, 'subscriber', {
         insertMode: 'append',
-        width: 400,
-        height: 300
-      }, handleError);
+        width: 2000,
+        height: 800
+      }, 
+      {fitMode: "cover"},
+      handleError);
     });
+      
+    
   // Create a publisher
   var publisher = OT.initPublisher('publisher', {
     insertMode: 'append',
-    width: 400,
-    height: 300
+    width: 300,
+    height: 200
   }, handleError);
 
   // Connect to the session

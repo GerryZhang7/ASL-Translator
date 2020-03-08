@@ -20,21 +20,18 @@ initializeSession();
 function initializeSession() {
   var session = OT.initSession(apiKey, sessionId);
 
-   // Create a publisher
-   var publisher = OT.initPublisher('publisher', {
-    insertMode: 'append',
-    width: '50%',
-    height: '50%'
-  }, handleError);
- 
+
   // Subscribe to a newly created stream
-//   session.on('streamCreated', function(event) {
-//     session.subscribe(event.stream, 'subscriber', {
-//       insertMode: 'append',
-//       width: '50%',
-//       height: '50%'
-//     }, handleError);
-//   });
+  session.on('streamCreated', function(event) {
+    session.subscribe(event.stream, 'subscriber', {
+      insertMode: 'append',
+      width: '50%',
+      height: '50%'
+    }, handleError);
+  });
+
+ 
+
   // Connect to the session
   session.connect(token, function(error) {
     // If the connection is successful, initialize a publisher and publish to the session
